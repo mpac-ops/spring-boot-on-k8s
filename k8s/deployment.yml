@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: demo-service-deployment
+  name: simple-spring-boot
 spec:
   replicas: 2 # tells deployment to run 2 pods matching the template
   template: # create pods using pod definition in this template
     metadata:
       labels:
-        app: demo-service
+        app: simple-spring-boot
     spec:
       containers:
-      - name: demo-service
+      - name: simple-spring-boot
         image: registry.k8sops.mpacops.ca/example/simple-spring-boot
         ports:
         - containerPort: 8090
