@@ -1,11 +1,8 @@
 node {
    def gHome
-   stage('Preparation') { // for display purposes
+   stage('Preparation') {
       // Get some code from a GitHub repository
       git 'https://github.com/mpac-ops/spring-boot-on-k8s.git'
-      // Get the Maven tool.
-      // ** NOTE: This 'M3' Maven tool must be configured
-      // **       in the global configuration.           
       gHome = tool 'Gradle'
    }
    stage('Build') {
