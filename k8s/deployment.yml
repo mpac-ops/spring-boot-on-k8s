@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: demo-service
-        image: sbrosinski/demo-service
+        image: registry.k8sops.mpacops.ca/example/simple-spring-boot
         ports:
         - containerPort: 8090
